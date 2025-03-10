@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern wave-themed interactive website showcasing web development">
+    <meta name="keywords" content="wave theme, interactive, web development, modern design">
+    <meta property="og:title" content="Wave Interactive Website">
+    <meta property="og:description" content="Modern wave-themed interactive website showcasing web development">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Wave Interactive Website">
+    <meta name="twitter:description" content="Modern wave-themed interactive website showcasing web development">
+    <title>Wave Interactive Website</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="styles/wave.css" rel="stylesheet">
+    <link href="styles/theme.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'wave-primary': '#3b82f6',
+                        'wave-secondary': '#60a5fa',
+                        'wave-accent': '#8b5cf6',
+                        'wave-dark': '#111827',
+                        'wave-light': '#f9fafb'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'wave': 'wave 5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        wave: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/ThemeToggle.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/WaveSection.js"></script>
+    <script type="text/babel" src="components/Features.js"></script>
+    <script type="text/babel" src="components/Timeline.js"></script>
+    <script type="text/babel" src="components/Testimonials.js"></script>
+    <script type="text/babel" src="components/ContactForm.js"></script>
+    <script type="text/babel" src="components/PostList.js"></script>
+    <script type="text/babel" src="components/Newsletter.js"></script>
+    <script type="text/babel" src="components/Modal.js"></script>
+    <script type="text/babel" src="components/Toast.js"></script>
+    <script type="text/babel" src="utils/api.js"></script>
+    <script type="text/babel" src="utils/validation.js"></script>
+    <script type="text/babel" src="utils/animations.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
